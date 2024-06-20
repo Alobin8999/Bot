@@ -17,14 +17,14 @@ async def on_ready():
 async def clear(ctx, amount=None):
     await ctx.channel.purge(limit=int(amount)+1)
 
-async def load_extensions():
+'''async def load_extensions():
     for filename in os.listdir("cogs"):
         if filename.endswith(".py"):
-            await client.load_extension(f"cogs.{filename[:-3]}")
+            await client.load_extension(f"cogs.{filename[:-3]}")'''
 
 async def main():
     async with client:
-        await load_extensions()
+        #await load_extensions()
         await client.start(TOKEN)
 
 asyncio.run(main())
